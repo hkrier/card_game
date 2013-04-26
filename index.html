@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Card Game - Hannah Krier</title>
+	
+	<!-- CSS Includes -->
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.css" />    
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+ 
+<!-- Start Modal -->
+<div id="start_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h4 id="myModalLabel">Welcome, Addepar!</h4>
+  </div>
+  <div class="modal-body">
+    <p>This is a simple card animation. To play, click on a card to move it to the Discard Pile. Click on the Deal Pile to replace any empty slots. Have fun!</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" data-dismiss="modal" aria-hidden="true" onclick="start()">Play Game</button>
+  </div>
+</div>
+
+<!-- End Modal -->
+<div id="end_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h4 id="myModalLabel">Game Over</h4>
+  </div>
+  <div class="modal-body">
+    <p>You're all out of cards!</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" data-dismiss="modal" aria-hidden="true" onclick="start()">Play Again</button>
+  </div>
+</div>
+
+<!-- Card Piles -->
+<ul id="piles">
+	<li id="pile0" class="pile"></div></li>
+	<li id="pile1" class="pile"></div></li>
+	<li id="pile2" class="pile"></div></li>
+	<li id="pile3" class="pile"></div></li>
+	<li id="pile4" class="pile"></div></li>
+</ul>
+	
+<!-- Card Decks -->
+<ul id="decks">
+	<li>
+		<div class="card facedown" id="deals" onclick="deal()" onmouseover="showHover(0)" onmouseout="hideHover(0)">
+			<div class="facedown_middle">
+				<div id="hover0" class="hover_card">Deal</div>
+			</div>
+		</div>
+		
+    </li>
+    <li>
+		<div class="card facedown" id="discards" onmouseover="showHover(1)" onmouseout="hideHover(1)">
+			<div class="facedown_middle">
+				<div id="hover1" class="hover_card">Discard</div>
+			</div>	
+		</div>
+		
+    </li>
+</ul>
+
+<!-- JS Includes -->   
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/jQueryRotate.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
